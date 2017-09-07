@@ -6,16 +6,16 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
-@EnableAspectJAutoProxy
 @ComponentScan
+@EnableAspectJAutoProxy
 public class ConcertConfig {
     @Bean
-    public Audience audience() {
-        return new Audience();
+    public AudienceAspect audience() {
+        return new AudienceAspect();
     }
 
     @Bean
-    public AudienceAround audienceAround() {
-        return new AudienceAround();
+    public AudienceAroundAspect audienceAround() {
+        return new AudienceAroundAspect();
     }
 }

@@ -6,7 +6,8 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
-public class AudienceAround {
+public class AudienceAroundAspect {
+
     @Pointcut("execution(** com.mikheiev.concert.Performance.perform(..))")
     public void performance() {}
 
@@ -21,4 +22,5 @@ public class AudienceAround {
             System.out.println("Demanding a refund.");
         }
     }
+
 }

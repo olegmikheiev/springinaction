@@ -12,11 +12,14 @@ repositories {
 def $springVersion = '4.3.10.RELEASE'
 
 dependencies {
-
     compile group: 'org.springframework', name: 'spring-context', version: $springVersion
     compile group: 'org.aspectj', name: 'aspectjrt', version: '1.8.10'
 
+    // Testing
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile group: 'org.springframework', name: 'spring-test', version: $springVersion
     testCompile group: 'com.github.stefanbirkner', name: 'system-rules', version: '1.16.1'
+
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.9.0'
 }

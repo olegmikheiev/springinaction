@@ -7,7 +7,8 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
-public class Audience {
+public class AudienceAspect {
+
     @Pointcut("execution(** com.mikheiev.concert.Performance.perform(..))")
     public void performance() {}
 
@@ -30,4 +31,5 @@ public class Audience {
     public void demandRefund() {
         System.out.println("Demanding a refund.");
     }
+
 }
