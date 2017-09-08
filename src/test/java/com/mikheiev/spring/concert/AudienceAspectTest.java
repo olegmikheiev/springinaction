@@ -22,10 +22,12 @@ public class AudienceAspectTest {
 
     @Test
     public void audienceIsHappyWithPerformance() {
-        System.out.println("Verifying that audience is happy with performance...");
-        //Performance performance = Mockito.mock(Performance.class);
         performance.perform();
-        assertTrue("Audience didn't clap.", log.getLog().contains("CLAP CLAP CLAP!\n"));
-        System.out.println("Audience is happy!");
+        assertTrue("Audience didn't clap.", log.getLog().contains("CLAP CLAP CLAP!"));
+    }
+
+    @Test
+    public void audienceDmandsRefund() throws Exception {
+        performance.perform(true);
     }
 }

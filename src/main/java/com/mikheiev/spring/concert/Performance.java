@@ -1,5 +1,6 @@
 package com.mikheiev.spring.concert;
 
 public interface Performance {
-    public void perform();
+    void perform();
+    void perform(boolean doFail) throws Exception;
 }

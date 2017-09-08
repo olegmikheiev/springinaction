@@ -17,8 +17,7 @@ import static org.junit.Assert.assertTrue;
 public class SimpleComedyShowTest {
 
     @Autowired
-    @Qualifier("simpleComedyShow")
-    private Performance comedyShow;
+    private SimpleComedyShow comedyShow;
 
     @Rule
     public final SystemOutRule log = new SystemOutRule().enableLog();
